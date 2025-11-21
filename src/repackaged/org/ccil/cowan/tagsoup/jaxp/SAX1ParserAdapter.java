@@ -1,4 +1,19 @@
-// This file is part of TagSoup and is Copyright 2002-2008 by John Cowan.
+//start - license
+/*
+ * Copyright (c) 2025 Ashera Cordova
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ */
+//end - license
+ // This file is part of TagSoup and is Copyright 2002-2008 by John Cowan.
 //
 // TagSoup is licensed under the Apache License,
 // Version 2.0.  You may obtain a copy of this license at
@@ -57,7 +72,7 @@ public class SAX1ParserAdapter
         }
     }
 
-    /**
+   /**
      * @deprecated
      */
     public void setDocumentHandler(DocumentHandler h)
@@ -83,7 +98,7 @@ public class SAX1ParserAdapter
     public void setLocale(java.util.Locale locale) 
         throws SAXException
     {
-        /* I have no idea what this is supposed to do... so let's
+       /* I have no idea what this is supposed to do... so let's
          * throw an exception
          */
         throw new SAXNotSupportedException("TagSoup does not implement setLocale() method");
@@ -91,7 +106,7 @@ public class SAX1ParserAdapter
 
     // Helper classes:
 
-    /**
+   /**
      * We need another helper class to deal with differences between
      * Sax2 handler (content handler), and Sax1 handler (document handler)
      * @deprecated
@@ -103,7 +118,7 @@ public class SAX1ParserAdapter
 
         final AttributesWrapper mAttrWrapper = new AttributesWrapper();
 
-        /**
+       /**
          * @deprecated
          */
         DocHandlerWrapper(DocumentHandler h)
@@ -183,7 +198,7 @@ public class SAX1ParserAdapter
         }
     }
 
-    /**
+   /**
      * And one more helper to deal with attribute access differences
      * @deprecated
      */ 

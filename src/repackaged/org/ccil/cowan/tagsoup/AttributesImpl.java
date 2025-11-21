@@ -1,4 +1,19 @@
-// XMLWriter.java - serialize an XML document.
+//start - license
+/*
+ * Copyright (c) 2025 Ashera Cordova
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ */
+//end - license
+ // XMLWriter.java - serialize an XML document.
 // Written by David Megginson, david@megginson.com
 // and placed by him into the public domain.
 // Extensively modified by John Cowan for TagSoup.
@@ -60,7 +75,7 @@ public class AttributesImpl implements Attributes
     ////////////////////////////////////////////////////////////////////
 
 
-    /**
+   /**
      * Construct a new, empty AttributesImpl object.
      */
     public AttributesImpl ()
@@ -70,7 +85,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Copy an existing Attributes object.
      *
      * <p>This constructor is especially useful inside a
@@ -90,7 +105,7 @@ public class AttributesImpl implements Attributes
     ////////////////////////////////////////////////////////////////////
 
 
-    /**
+   /**
      * Return the number of attributes in the list.
      *
      * @return The number of attributes in the list.
@@ -102,7 +117,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Return an attribute's Namespace URI.
      *
      * @param index The attribute's index (zero-based).
@@ -120,7 +135,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Return an attribute's local name.
      *
      * @param index The attribute's index (zero-based).
@@ -138,7 +153,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Return an attribute's qualified (prefixed) name.
      *
      * @param index The attribute's index (zero-based).
@@ -156,7 +171,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Return an attribute's type by index.
      *
      * @param index The attribute's index (zero-based).
@@ -174,7 +189,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Return an attribute's value by index.
      *
      * @param index The attribute's index (zero-based).
@@ -191,7 +206,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Look up an attribute's index by Namespace name.
      *
      * <p>In many cases, it will be more efficient to look up the name once and
@@ -216,7 +231,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Look up an attribute's index by qualified (prefixed) name.
      *
      * @param qName The qualified name.
@@ -235,7 +250,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Look up an attribute's type by Namespace-qualified name.
      *
      * @param uri The Namespace URI, or the empty string for a name
@@ -257,7 +272,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Look up an attribute's type by qualified (prefixed) name.
      *
      * @param qName The qualified name.
@@ -277,7 +292,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Look up an attribute's value by Namespace-qualified name.
      *
      * @param uri The Namespace URI, or the empty string for a name
@@ -299,7 +314,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Look up an attribute's value by qualified (prefixed) name.
      *
      * @param qName The qualified name.
@@ -334,7 +349,7 @@ public class AttributesImpl implements Attributes
     ////////////////////////////////////////////////////////////////////
 
 
-    /**
+   /**
      * Clear the attribute list for reuse.
      *
      * <p>Note that little memory is freed by this call:
@@ -351,7 +366,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Copy an entire Attributes object.
      *
      * <p>It may be more efficient to reuse an existing object
@@ -376,7 +391,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Add an attribute to the end of the list.
      *
      * <p>For the sake of speed, this method does no checking
@@ -406,7 +421,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Set an attribute in the list.
      *
      * <p>For the sake of speed, this method does no checking
@@ -442,7 +457,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Remove an attribute from the list.
      *
      * @param index The index of the attribute (zero-based).
@@ -470,7 +485,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Set the Namespace URI of a specific attribute.
      *
      * @param index The index of the attribute (zero-based).
@@ -490,7 +505,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Set the local name of a specific attribute.
      *
      * @param index The index of the attribute (zero-based).
@@ -510,7 +525,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Set the qualified name of a specific attribute.
      *
      * @param index The index of the attribute (zero-based).
@@ -530,7 +545,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Set the type of a specific attribute.
      *
      * @param index The index of the attribute (zero-based).
@@ -549,7 +564,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Set the value of a specific attribute.
      *
      * @param index The index of the attribute (zero-based).
@@ -574,7 +589,7 @@ public class AttributesImpl implements Attributes
     ////////////////////////////////////////////////////////////////////
 
 
-    /**
+   /**
      * Ensure the internal array's capacity.
      *
      * @param n The minimum number of attributes that the array must
@@ -606,7 +621,7 @@ public class AttributesImpl implements Attributes
     }
 
 
-    /**
+   /**
      * Report a bad array index in a manipulator.
      *
      * @param index The index to report.

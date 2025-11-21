@@ -1,4 +1,19 @@
-// This file is part of TagSoup and is Copyright 2002-2008 by John Cowan.
+//start - license
+/*
+ * Copyright (c) 2025 Ashera Cordova
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ */
+//end - license
+ // This file is part of TagSoup and is Copyright 2002-2008 by John Cowan.
 //
 // TagSoup is licensed under the Apache License,
 // Version 2.0.  You may obtain a copy of this license at
@@ -28,7 +43,7 @@ import org.xml.sax.*;
 public class SAXFactoryImpl
     extends SAXParserFactory
 {
-    /**
+   /**
      * The easiest way to test validity of features to set is to use
      * a prototype object. Currently this is actually not a real prototype,
      * in the sense that the configuration is actually passed separately
@@ -38,7 +53,7 @@ public class SAXFactoryImpl
      */
     private SAXParserImpl prototypeParser = null;
 
-    /**
+   /**
      * This Map contains explicitly set features that can be succesfully
      * set for XMLReader instances. Temporary storage is needed due to
      * JAXP design: multiple readers can be instantiated from a single
@@ -56,7 +71,7 @@ public class SAXFactoryImpl
 
     // // // JAXP API implementation:
 
-    /**
+   /**
      * Creates a new instance of <code>SAXParser</code> using the currently
      * configured factory parameters.
      */
@@ -71,7 +86,7 @@ public class SAXFactoryImpl
         }
     }
 
-    /**
+   /**
      * Defines that the specified feature is to enabled/disabled (as
      * per second argument) on reader instances created by this 
      * factory.
@@ -91,7 +106,7 @@ public class SAXFactoryImpl
         features.put(name, value ? Boolean.TRUE : Boolean.FALSE);
     }
 
-    /**
+   /**
      * Returns whether the specified property will be enabled or disabled
      * on reader instances constructed by this factory.
      */
